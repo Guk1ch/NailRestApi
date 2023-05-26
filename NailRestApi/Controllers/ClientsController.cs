@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NailRestApi.Models;
 
-namespace NailRestApi.Controllers
+namespace NailRestApi.Models
 {
-    public class ClientsController : Controller
+      [Route("api/[controller]")]
+    [ApiController]
+    public partial class ClientsController : Controller
     {
         private readonly NailAppContext _context;
 
@@ -25,10 +27,10 @@ namespace NailRestApi.Controllers
                           View(await _context.Clients.ToListAsync()) :
                           Problem("Entity set 'NailAppContext.Clients'  is null.");
         }
-
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<Client>>> GetClient()
         {
-            //return await _context.
+            return await _context.Clients.ToListAsync();
         }
 
         // GET: Clients/Details/5
