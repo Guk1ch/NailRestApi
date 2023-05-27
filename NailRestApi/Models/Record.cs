@@ -8,6 +8,6 @@
         public int Cost { get; set; }
         public bool IsDone { get; set; }
         
-        public virtual Client IdClientNavigation { get; set; }
+        public virtual Client? IdClientNavigation { get; set; }
     }
 }
