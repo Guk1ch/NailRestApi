@@ -1,6 +1,6 @@
-﻿namespace NailRestApi
+﻿namespace NailRestApi.Models
 {
-	public class NailAppContext
+	public partial class NailAppContext
 	{
 		private static NailAppContext _context;
 		public static NailAppContext GetContext()
