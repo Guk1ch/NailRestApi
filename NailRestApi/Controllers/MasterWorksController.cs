@@ -35,7 +35,7 @@ namespace NailRestApi.Controllers
 			return masterWork;
 		}
 		[HttpPost]
-		public async Task<ActionResult<MasterWork>> PostClient( MasterWork masterWork)
+		public async Task<ActionResult<MasterWork>> PostMasterWork( MasterWork masterWork)
 		{
 			//😎
 			_context.MasterWorks.Add(masterWork);

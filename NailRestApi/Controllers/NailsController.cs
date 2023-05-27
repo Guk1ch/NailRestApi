@@ -37,7 +37,7 @@ namespace NailRestApi.Controllers
 			return nail;
 		}
 		[HttpPost]
-		public async Task<ActionResult<Nail>> PostClient( Nail nail)
+		public async Task<ActionResult<Nail>> PostNail( Nail nail)
 		{
 			//🤠
 			_context.Nails.Add(nail);

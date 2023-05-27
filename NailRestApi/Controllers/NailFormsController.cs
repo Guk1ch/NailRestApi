@@ -35,7 +35,7 @@ namespace NailRestApi.Controllers
 			return nailForm;
 		}
 		[HttpPost]
-		public async Task<ActionResult<NailForm>> PostClient( NailForm nailForm)
+		public async Task<ActionResult<NailForm>> PostNailForm( NailForm nailForm)
 		{
 			//👉👈
 			_context.NailForms.Add(nailForm);
