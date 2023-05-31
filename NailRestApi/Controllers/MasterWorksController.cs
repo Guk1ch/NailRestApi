@@ -27,7 +27,7 @@ namespace NailRestApi.Controllers
 		[HttpGet("{id}")]
 		public ActionResult<MasterWork> GetMasterWork(int id)
 		{
-			var masterWork = _context.MasterWorks.ToList().FirstOrDefault(x => x.Id == id);
+			var masterWork = _context.MasterWorks.FirstOrDefault(x => x.Id == id);
 			if (masterWork == null)
 			{
 				return NotFound();
