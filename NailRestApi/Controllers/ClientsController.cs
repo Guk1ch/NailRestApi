@@ -37,7 +37,7 @@ namespace NailRestApi.Controllers
 			return client;
 		}
 		[HttpPost]
-		public async Task<ActionResult<Client>> PostClient([FromHeader] string UserKey, Client client)
+		public async Task<ActionResult<Client>> PostClient(Client client)
 		{
 			//👉👈😎🤠
 			_context.Clients.Add(client);
