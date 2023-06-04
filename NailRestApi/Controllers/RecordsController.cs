@@ -48,7 +48,7 @@ namespace NailRestApi.Controllers
 			
 			_context.Records.Remove(record);
 			await _context.SaveChangesAsync();
-			return null;
+			return CreatedAtAction( "Succsess", "" );
 		}
 
 
