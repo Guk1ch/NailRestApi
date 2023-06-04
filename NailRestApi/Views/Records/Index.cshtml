@@ -22,6 +22,9 @@
                 @Html.DisplayNameFor(model => model.IsDone)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.IdClientNavigation)
             </th>
             <th></th>
@@ -39,6 +42,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.IsDone)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IdClientNavigation.Id)
             </td>

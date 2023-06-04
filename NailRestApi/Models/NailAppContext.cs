@@ -93,6 +93,7 @@ public partial class NailAppContext : DbContext
 			entity.Property(e => e.Cost).HasColumnName("Cost");
 			entity.Property(e => e.IsDone).HasColumnName("IsDone");
 			entity.Property(e => e.IdClient).HasColumnName("IdClient");
+			entity.Property(e => e.Date).HasColumnName("Date");
 			entity.HasOne(d => d.IdClientNavigation).WithMany(p => p.Records)
 			  .HasForeignKey(d => d.IdClient)
 			  .HasConstraintName("FK_Record_Client");

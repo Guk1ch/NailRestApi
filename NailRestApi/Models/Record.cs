@@ -7,6 +7,7 @@
 		public string Time { get; set; }
         public int Cost { get; set; }
         public bool IsDone { get; set; }
+		public string? Date { get; set; }
         
         public virtual Client? IdClientNavigation { get; set; }
     }
