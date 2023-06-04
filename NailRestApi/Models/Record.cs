@@ -10,6 +10,6 @@
 		//новое поле даты
 		public string? Date { get; set; }
         
-        public virtual Client? IdClientNavigation { get; set; }
+        public virtual Client? IdClientNavigation { get; }
     }
 }
