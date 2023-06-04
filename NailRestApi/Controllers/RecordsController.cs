@@ -42,6 +42,15 @@ namespace NailRestApi.Controllers
 			await _context.SaveChangesAsync();
 			return CreatedAtAction("GetRecord", new { id = record.Id }, record);
 		}
+		[HttpDelete]
+		public async Task<ActionResult<IEnumerable<Record>>> DeleteRecords(Record record)
+		{
+			
+			_context.Records.Remove(record);
+			await _context.SaveChangesAsync();
+			return null;
+		}
+
 
 
 
