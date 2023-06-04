@@ -12,13 +12,13 @@ namespace NailRestApi.Controllers
 	[Route("api/[controller]")]
 	[ApiController]
 	public partial class RecordsController : Controller
-    {
-        private readonly NailAppContext _context;
+	{
+		private readonly NailAppContext _context;
 
-        public RecordsController(NailAppContext context)
-        {
-            _context = context;
-        }
+		public RecordsController(NailAppContext context)
+		{
+			_context = context;
+		}
 		[HttpGet]
 		public async Task<ActionResult<IEnumerable<Record>>> GetRecords()
 		{
@@ -35,14 +35,14 @@ namespace NailRestApi.Controllers
 			return record;
 		}
 		[HttpPost]
-		public async Task<ActionResult<Record>> PostRecord( Record record)
+		public async Task<ActionResult<Record>> PostRecord(Record record)
 		{
 			//👉👈
 			_context.Records.Add(record);
 			await _context.SaveChangesAsync();
 			return CreatedAtAction("GetRecord", new { id = record.Id }, record);
 		}
-		[HttpDelete]
+		[HttpPost("DeleteRecord")]
 		public async Task<ActionResult<IEnumerable<Record>>> DeleteRecords(Record record)
 		{
 			
